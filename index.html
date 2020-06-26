@@ -38,60 +38,41 @@
     <title>АВТОКРАСКА KG</title>
   </head>
   <body>
-    <header class="header">
-      
-      <div class="margin-header">
-        <div class="header-logo">
-          <a href="/index.html">
-            <img class="logo" 
-              src="/images/logo/logo.png"
-           
-              alt=""
-          />
-          <img class="gradient logo1"
-          src="/images/logo/logo1.png"
-         
-          alt=""
-      /></a>
-        </div>
-        <nav class="header-nav">
-          <a href="/catalog.html" class="nav__link">каталог</a>
-          <a href="#" class="nav__link">новинки</a>
-          <a href="#map"class="nav__link">карта магазина</a>
-          <a href="#" class="nav__link">где покрасить</a>
-          <a href="#" class="nav__link">Кабинет</a>
-        </nav>
-
-        <div class="header-search">
-          <form>
-            <button type="submit" class="lupa">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-            <input
-              class="search"
-              type="text"
-              name="search"
-              placeholder="Искать..."
-            />
-          </form>
-        </div>
-        <div class="hamburger-menu">
-          <input id="menu__toggle" type="checkbox" />
-          <label class="menu__btn" for="menu__toggle">
+    <hader class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/index.html"
+            ><img class="header-logo" src="/images/logo/logo.png" alt=""
+          /></a>
+          <div class="header-burger">
             <span></span>
-          </label>
-          <ul class="menu__box">
-            <li><a href="/catalog.html">каталог</a></li>
-            <li><a href="#">новинки</a></li>
-            <li><a href="#map" ></a>карта магазина</a></li>
-            <li><a href="#">где покрасить</a></li>
-            <li><a href="#">Кабинет</a></li>
-           
-          </ul>
+          </div>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li><a class="header__link" href="/catalog.html">каталог</a></li>
+              <li><a class="header__link" href="#">новинки</a></li>
+              <li><a class="header__link" href="#map">карта магазина</a></li>
+              <li><a class="header__link" href="#">где покрасить</a></li>
+              <li><a class="header__link" href="#">Кабинет</a></li>
+              <li>
+                <form>
+                  <input
+                    class="search"
+                    type="text"
+                    name="search"
+                    placeholder="Искать..."
+                  />
+                  <button type="submit" class="lupa">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-  
-    </header>
+    </hader>
+ 
   </div>
     <div class="content-area">
       <div class="slider">
