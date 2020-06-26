@@ -11,7 +11,7 @@ body {
 
 body {
   color: #252227;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-size: 14px;
   line-height: 1.7;
   background-color: #1d3964;
@@ -26,6 +26,9 @@ body {
 }
 
 .header {
+  
+  font-size: 18px;
+  
   position: fixed;
   width: 100%;
   top: 0;
@@ -322,6 +325,20 @@ input {
   .catalog {
     height: 359px;
     bottom: 40px;
+  }
+
+  .fa-paper-plane-o {
+    position: relative;
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .sections__link {
+
+    font-size: 14px;
+    transition: 0.3s;
+    padding-top: 10px;
+    position: relative;
   }
 }
 
@@ -662,12 +679,17 @@ input {
 @media (max-width: 580px) {
   .contact {
     grid-template-columns: 1fr;
+    max-height: 1450px;
+  }
 
+  .mail {
+    font-size: 18px;
   }
 
   .contact-grid {
-    grid-template-rows: 1fr 3fr;
-    max-height: 1350px;
+
+    grid-template-rows: 41% 60%;
+
   }
 }
 
@@ -678,10 +700,7 @@ input {
 }
 
 @media (max-width: 400px) {
-  .contact-grid {
-    grid-template-rows: 1fr 3fr;
 
-  }
 
   .street {
     font-size: 14px;
