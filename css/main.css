@@ -17,6 +17,7 @@ body {
   background-color: #1d3964;
 }
 
+
 .hamburger-menu {
   position: relative;
   z-index: 100;
@@ -37,7 +38,6 @@ body {
   /* центрируем содержимое кнопки */
   position: relative;
 
-  float: left;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -47,10 +47,11 @@ body {
   bottom: 20px;
 }
 
+
 /* добавляем "гамбургер" */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -58,12 +59,12 @@ body {
   background-color: #616161;
 }
 
-.menu__btn > span::before {
+.menu__btn>span::before {
   content: "";
   top: -8px;
 }
 
-.menu__btn > span::after {
+.menu__btn>span::after {
   content: "";
   top: 8px;
 }
@@ -75,16 +76,16 @@ body {
   visibility: hidden;
   top: 70px;
   left: -90%;
-  width: 300px;
+  width: 100%;
   height: 100%;
   margin: 0;
-  padding: 60px 0;
+  padding: 20px 0 0 20px;
   list-style: none;
-  text-align: center;
   font-size: 18px;
   background-color: #f4f4f5;
   text-transform: uppercase;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  overflow: auto;
 }
 
 .menu__box a {
@@ -93,28 +94,27 @@ body {
   color: #333;
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
+
+#menu__toggle:checked~.menu__btn>span {
   transform: rotate(45deg);
 }
 
-#menu__toggle:checked ~ .menu__btn > span::before {
+#menu__toggle:checked~.menu__btn>span::before {
   top: 0;
   transform: rotate(0);
 }
 
-#menu__toggle:checked ~ .menu__btn > span::after {
+#menu__toggle:checked~.menu__btn>span::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 0;
-}
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
   transition-duration: 0.25s;
 }
 
@@ -122,10 +122,13 @@ body {
   transition-duration: 0.25s;
 }
 
-.top-separator {
-  width: 100%;
-  height: 80px;
+#menu__toggle:checked~.menu__box {
+  visibility: visible;
+  left: 0;
 }
+
+
+
 
 .header {
   width: 100%;
@@ -151,12 +154,11 @@ body {
 .header-nav {
   font-size: 18px;
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
   grid-area: "header-nav";
 }
 
 .header-nav a {
+  padding-right: 15px;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -191,9 +193,11 @@ body {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -251,6 +255,7 @@ input {
   .margin-header {
     grid-template-columns: 10% 0% 1fr 10%;
     grid-template-areas: "header-logo header-nav header-search menu__btn";
+    grid-template-rows: 70px;
   }
 }
 
@@ -274,6 +279,7 @@ input {
     width: 45px;
     height: 45px;
   }
+
   .logo1 {
     top: 12px;
     width: 45px;
@@ -284,7 +290,13 @@ input {
     position: relative;
     bottom: 20px;
   }
-  
+
+
+  .menu__box {
+    top: 50px;
+  }
+
+
 }
 
 @media (max-width: 360px) {
@@ -400,6 +412,7 @@ input {
   .icon {
     grid-template-columns: 1fr 1fr;
   }
+
   .catalog {
     height: 359px;
     bottom: 57px;
@@ -504,7 +517,7 @@ input {
     height: 900px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    margin: 15px;
+    margin: 0 10px;
   }
 
   .one img {
@@ -624,6 +637,7 @@ input {
   .info {
     margin-top: 3px;
   }
+
   .margin-info {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -742,7 +756,7 @@ input {
 @media (max-width: 580px) {
   .contact {
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 600px;
+
   }
 
   .contact-grid {
@@ -758,8 +772,9 @@ input {
 }
 
 @media (max-width: 400px) {
-  .contact {
-    margin: 0;
+  .contact-grid {
+    grid-template-rows: 1fr 3fr;
+
   }
 
   .street {
