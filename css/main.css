@@ -679,7 +679,7 @@ input {
 @media (max-width: 580px) {
   .contact {
     grid-template-columns: 1fr;
-    max-height: 1450px;
+  
   }
 
   .mail {
@@ -687,8 +687,7 @@ input {
   }
 
   .contact-grid {
-
-    grid-template-rows: 41% 60%;
+    grid-template-rows: 1fr;
 
   }
 }
@@ -696,6 +695,7 @@ input {
 @media (max-width: 480px) {
   .contact {
     margin: 0 10px;
+    padding: 0 10px;
   }
 }
 
@@ -710,6 +710,7 @@ input {
     font-size: 14;
   }
 }
+
 
 .socials {
   width: 100%;
